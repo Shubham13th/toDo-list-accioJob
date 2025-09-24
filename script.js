@@ -133,7 +133,7 @@ todoForm.addEventListener('submit', (event) => {
 
 
     // Clear input fields
-    itemName.value = '';
-    itemDeadline.value = '';
-    priority.value = '';
+    // itemName.value = '';
+    // itemDeadline.value = '';
+    // priority.value = '';
 });
