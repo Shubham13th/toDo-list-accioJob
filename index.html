@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>To-Do List</h1>
+    </header>
+    <main>
+        <form id="todoForm">
+            <input id="itemName" type="text" placeholder="Item Name">
+            <input id="itemDeadline" type="text" placeholder="Deadline">
+            <select name="priority" id="priority">
+                <option value="" disabled selected hidden>Priority</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <button id="addBtn" type="submit">Add Item</button>
+        </form>
+        <div id="todayTodo" class="todos">
+            <h2>Today's Todo</h2>
+            <ol id="todayTodoList" class="todo-list"></ol>
+        </div>
+        <div id="futureTodo" class="todos">
+            <h2>Future Todo</h2>
+            <ol id="futureTodoList" class="todo-list"></ol>
+        </div>
+        <div id="completedTodo" class="todos">
+            <h2>Completed TodoList</h2>
+            <ol id="completedTodoList" class="todo-list"></ol>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

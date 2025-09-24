@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+header>h1 {
+    font-size: 5rem;
+    text-align: center;
+}
+
+/* Main */
+main {
+    width: 100%;
+}
+
+/* Form */
+#todoForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#itemName,
+#itemDeadline,
+#priority {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    min-width: 200px;
+    flex: 1 1 200px;
+    /* flexible for smaller screens */
+}
+
+form>button {
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1 1 100px;
+}
+
+/* Todos container */
+.todos {
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+/* List items */
+.todo-list {
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* wrap content on smaller screens */
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px 0;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: black;
+    color: #fff;
+}
+
+/* Paragraph inside list-item */
+.list-item p {
+    margin: 5px;
+    flex: 1 1 100px;
+    /* grow/shrink for small screens */
+}
+
+/* Icons */
+.list-item i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Completed task style */
+.completed p {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* ====== Responsive Media Queries ====== */
+@media (max-width: 768px) {
+    header>h1 {
+        font-size: 3rem;
+    }
+
+    #itemName,
+    #itemDeadline,
+    #priority,
+    form>button {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .list-item {
+        flex-direction: row;
+        /* stack content vertically */
+        align-items: flex-start;
+    }
+
+    .list-item i {
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header>h1 {
+        font-size: 2.5rem;
+    }
+
+    #itemName,
+    #itemDeadline,
+    #priority,
+    form>button {
+        font-size: 1rem;
+        min-width: 100%;
+    }
+
+    .list-item p {
+        font-size: 0.9rem;
+    }
+}
